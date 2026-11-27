@@ -1,0 +1,5 @@
+# 构建产物
+/dist/*.deb
+/localSend-main/
+localsend-main/
+*.tar.gz
