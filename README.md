@@ -4,7 +4,7 @@
 
 功能没动，和官方一模一样。
 
-## 装
+## 安装
 
 从 [Releases](../../releases) 下 deb，然后：
 
@@ -26,7 +26,7 @@ arm64，glibc 2.31 及以上。x86 的机器用官方包就行，别用这个。
 
 想知道差在哪的话：官方包里 C++ runner 和 Rust 核心库都要求 GLIBC 2.34，这个包里分别是 2.17 和 2.30。Flutter 引擎本身两边都是 2.18。
 
-## 一个已知毛病
+## 一个已知问题
 
 界面可能会走软件渲染。飞腾那批机器的 Mesa 驱动给不出 Flutter 要的 GL 上下文，程序会自己退回用 CPU 画。功能完全不受影响，就是首次启动慢两三秒，传文件这种场景基本感觉不到。
 
@@ -38,7 +38,7 @@ FLUTTER_LINUX_RENDERER=opengl localsend_app
 
 没成功就还是软的，别折腾。
 
-## 自己编
+## 自己编译
 
 ```bash
 sudo apt-get install -y clang cmake ninja-build pkg-config libgtk-3-dev libayatana-appindicator3-dev
